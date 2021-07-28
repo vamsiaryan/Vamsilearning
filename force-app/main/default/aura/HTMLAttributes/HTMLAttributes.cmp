@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="dataSetDetails" type="List" />
+    <aura:handler name="init" value="{!this}" action="{!c.onLoadDataSet}" />
+
+    <div class="slds-card">
+        <aura:iteration items="{!v.dataSetDetails}" var="record" indexVar="ind">
+            <p>{!ind+1}.
+                <a onclick="{!c.getPhoneNumber}" data-name="{!record.Name}" data-phone="{!record.Phone}"
+                    data-gender="{!record.Gender}" data-ind="{!ind+1}" data-fulldetails="{!record}">{!record.Name}</a>
+            </p>
+        </aura:iteration>
+    </div>
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component>
+
+    <aura:method name="doOperation" action="{!c.addsum}" access="public">
+        <aura:attribute name="heading1" type="String" />
+        <aura:attribute name="heading2" type="String" />
+    </aura:method>
+
+        <lightning:input type="number" label="Firstnum" aura:id="fnum1"/>
+            <br />  +  <br />
+        <lightning:input type="number" label="Secondnum" aura:id="fnum2"/>
+            <br />  =  <br />
+            <lightning:input type="number" aura:id="fnum3"/>
+</aura:component>	

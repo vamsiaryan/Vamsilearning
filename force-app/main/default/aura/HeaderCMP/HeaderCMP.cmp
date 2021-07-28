@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="HeaderCMP">
+    <aura:attribute name="searchField" type="String"/>
+    <aura:attribute name="secondField" type="String"/>
+    <aura:attribute name="accounts" type="List"/>
+    <!-- EVENT HANDLERS -->
+    <aura:registerEvent name="searchEvent" type="c:SearchEvent"/>
+    <aura:handler name="change" value="{!v.accounts}" action="{!c.fireAppEvent}"/>
+
+    <lightning:card title="Search For Accounts">
+        <p class="slds-var-p-horizontal_small">
+            <lightning:layout multipleRows="true">
+                <!-- BASE COMPONENTS-->
+                <lightning:layoutItem size="11" padding="around-small">
+                    <lightning:input type="text" placeholder="Search for Accounts" variant="label-hidden" aura:id="searchField" value="{!v.searchField}"/>
+                </lightning:layoutItem>
+
+                <lightning:layoutItem size="1" padding="around-small">
+                    <lightning:button label="Search" onclick="{!c.searchAction}"/>
+                </lightning:layoutItem>
+             
+            </lightning:layout>
+            Total Accounts : {!v.accounts.length}
+        </p>
+    </lightning:card>
+</aura:component>

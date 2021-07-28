@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    
+    <lightning:card  title="Addition of two numbers">
+        <aura:set attribute="actions">
+          </aura:set>
+        <p class="slds-p-horizontal_small">
+            <c:Additioninput aura:id="Addinput"/>
+        </p>
+    
+
+    <aura:set attribute="footer">
+        <lightning:button label="sum" variant="brand" onclick="{!c.Addinput1}"/>
+    </aura:set>
+</lightning:card>
+
+</aura:component>	

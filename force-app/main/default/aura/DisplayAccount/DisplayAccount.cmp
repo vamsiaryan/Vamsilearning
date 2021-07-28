@@ -1,0 +1,16 @@
+<aura:component>
+    <aura:registerEvent name="accConEvt" type="c:AccountContactEvt"/>
+    <aura:attribute name="record" type="Account"/>
+    <!-- Event Register -->
+    <aura:registerEvent name="selectRecord_EventName" type="c:RecordSelect"/>
+    <lightning:card title="{!v.record.Name}">
+        <aura:set attribute="actions">
+            <lightning:button label="Edit" onclick="{!c.editAction}" variant="brand"/>
+            <lightning:button label="View Contacts" onclick="{!c.viewContacts}"/>
+        </aura:set>
+        <p class="slds-var-p-horizontal_small">
+            {!v.record.Phone}<br/>
+           {!v.record.Description}
+        </p>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="this is a demo purpose to know APp events">
+    <aura:attribute name="accountData" type="List"/>
+</aura:event>

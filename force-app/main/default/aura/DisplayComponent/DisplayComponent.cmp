@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <div class="slds-card">
+    <lightning:input typr="text" label="component name" placeholder="" aura:id="comname"/>
+    <lightning:button label="Display" variant="brand" onclick="{!c.displayComponent}"/>
+    <lightning:button label="Delete" variant="destructive" onclick="{!c.deleteComponent1}"/>
+    </div>
+
+    <div class="slds-card">
+        {!v.body}
+    </div>
+</aura:component>	

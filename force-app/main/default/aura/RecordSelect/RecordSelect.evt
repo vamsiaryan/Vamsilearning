@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="RecordSelect helps to enable edit functionality">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="recordName" type="String"/>
+</aura:event>
